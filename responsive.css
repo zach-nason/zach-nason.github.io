@@ -1,7 +1,7 @@
 /* minor changes to the design can all be made in this block */
 :root {
   /* background image: */
-    --main-bg: url("backgroundImage.jpg");
+    --main-bg: url("backgroundImage.png");
   /* background color to show while loading + just in case: */
     --bg-2: #84A59D;
   /* main body text: */
