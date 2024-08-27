@@ -5,8 +5,8 @@
   /* background color to show while loading + just in case: */
     --bg-2: #84A59D;
   /* main body text: */
-    --text-color: #FBFFEE;
-    --main-font: 'Nunito',optima;
+    --text-color: #000000;
+    --main-font: 'Verdana',optima;
   /* accent text: */
     --fancy-font: 'Sofia', optima;
   /* links: */
