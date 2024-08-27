@@ -1,0 +1,180 @@
+/* minor changes to the design can all be made in this block */
+:root {
+  /* background image: */
+    --main-bg: url("backgroundImage.png");
+  /* background color to show while loading + just in case: */
+    --bg-2: #84A59D;
+  /* main body text: */
+    --text-color: #FBFFEE;
+    --main-font: 'Nunito',optima;
+  /* accent text: */
+    --fancy-font: 'Sofia', optima;
+  /* links: */
+    --link-color:#FBFFEE;
+    --hover: #617969;
+  /* navbar links: */
+    --highlight: #FBFFEE; /* active bg color */
+    --active: #617969 /* active text color */
+}
+
+html {
+   background: var(--main-bg) no-repeat center top fixed;
+   background-size: cover;
+   background-color: var(--bg-2);
+}
+
+body {
+   height: 100%;
+   font-family: var(--main-font);
+   margin: 0;
+   padding: 0px 0px 30px 0px;
+}
+
+div {
+}
+.content {
+   margin-left: 25%;
+   color: var(--text-color);
+}
+.content img {
+   max-width: 30%;
+   margin: 20px;
+}
+.content img.left {
+   max-width: 20%;
+   float: left;
+   margin: 20px;
+}
+.content img.right {
+   max-width: 20%;
+   float: right;
+   margin: 20px;
+}
+.transparent {
+   margin: 20px;
+   background-color: rgba(0,0,0,0.8);
+}
+.transparent::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+.main {
+   margin: 20px;
+}
+
+ul {
+}
+.sidenav {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 25%;
+   background-color: rgba(0,0,0,.8);
+   position: fixed;
+   left: 0;
+   top: 0;
+   height: 100%;
+   overflow: auto;
+   text-align: center;
+}
+.sidenav li{
+   color: var(--link-color);
+   font-family: var(--fancy-font);
+   font-size: 20px;
+}
+.sidenav li a{
+   display: block;
+   color: var(--link-color);
+   padding-top: 10px;
+   padding-bottom: 10px;
+   text-decoration: none;
+   font-family: var(--fancy-font);
+   font-size: 20px;
+}
+.sidenav li a.active {
+   background-color: var(--highlight);
+   color: var(--active);
+}
+.sidenav li a:hover {
+   background-color: var(--hover);
+   color: var(--link-color);
+}
+.sidenav li img {
+   width: 50%;
+   margin: auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border-radius: 50%;
+}
+
+h1 {
+   font-size: 40px;
+   padding-top: 20px;
+   font-family: var(--fancy-font);
+   margin-bottom: 0px;
+   font-weight: normal;
+}
+
+h2 {
+   font-size: 20px;
+   margin-top: 0px;
+   font-weight: normal;
+}
+
+p {
+   font-size: 14px;
+   line-height: 1.5;
+}
+
+a {
+   color: var(--link-color);
+   text-decoration: none;
+}
+a:hover {
+   color: var(--hover);
+}
+
+footer {
+   float: right;
+   color: var(--text-color);
+   font-family: var(--main-font);
+   font-size: 12px;
+   padding-top: 0px;
+   margin-top: 0px;
+   margin-right: 20px;
+   background-color: rgba(0,0,0,.8);
+}
+footer ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+footer ul li {
+   display: inline;
+   padding: 5px;
+}
+
+@media all and (max-width: 600px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  div.content {margin-left: 0;}
+}
+
+@media all and (max-width: 400px) {
+  h1 {font-size: 30px;}
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+}
